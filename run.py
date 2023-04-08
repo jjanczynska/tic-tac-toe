@@ -1,10 +1,25 @@
 # create an empty board to play the game
+def create_board():
+
 # place a letter on the board
+def insert_letter():
+
 # check if the space on the board is free
+def check_if_space_free():
+
 # print the current board
+def print_board():
+
 # check if the player or the computer has won
-# get the players nove
+def is_winner():
+
+# get the players move
+def get_player_move():
+
 # get the computers move
+def get_computer_move():
+
 # check if the board is full
+def is_board_full():
 
 
