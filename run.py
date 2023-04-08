@@ -1,5 +1,7 @@
 # create an empty board to play the game
 def create_board():
+    board = ["" for i in range(10)]
+    return board
 
 # place a letter on the board
 def insert_letter():
