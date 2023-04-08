@@ -7,9 +7,9 @@ def create_board():
 def insert_letter(board, letter, position):
     board[position] = letter
 
-
 # check if the space on the board is free
-def check_if_space_free():
+def check_if_space_free(board, position):
+    return board[position]==""
 
 # print the current board
 def print_board():
