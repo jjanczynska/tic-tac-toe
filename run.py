@@ -44,9 +44,23 @@ def is_winner(board, letter):
             (board[3] == letter & board[5] == letter & board[7] == letter))
 
 
-# get the players move
-#def get_player_move():
+# get the players position
+def get_player_position():
+    run = True
+    while run:
+        position = input('Please select a position to place an \'X\' (1-9): ')
+        try:
+            position = int(position)
+            if position < 1  and position < 9:
+                print("Please enter a number between 1 and 9")
+                elif not check_if_space_free(board, position):
+                    print("Space is occupied!")
+                else:
+                return position
+        except ValueError:
+            print("Please type a number!")
 
+            
 # get the computers move
 #def get_computer_move():
 
