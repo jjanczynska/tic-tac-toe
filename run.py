@@ -77,6 +77,11 @@ def get_computer_move(board, computer_letter):
             if is_winner(board_copy, "X" if computer_letter == "O" else "O"):
                 return i
 
+    for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
+        if is_space_free(board, i):
+            return i
+
+
 
 # check if the board is full
 #def is_board_full():
