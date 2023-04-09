@@ -82,4 +82,40 @@ def get_computer_move(board, computer_letter):
 def is_board_full(board):
     return not any([space == "" for space in board])
 
+def main_game():
+    print("Tic-Tac-Toe - Welcome to the game!")
+    print_board(board)
+
+    while not (is_board_full(board)):
+        if not (is_winner(board, "O")):
+            get_player_position()
+            print_board(board)
+        else:
+            print("Sorry, your opponent won this game!")
+            break
+
+        if not(is_winner(board, "X")):
+            position = get_computer_move()
+            if position == 0:
+                print("This game is a Tie!")
+                else:
+                    insert_letter("O", position)
+                    print("Computer placed an \'O\' in position", position, ":")
+                    print_board(board)
+        else:
+            print("X\ won the game!")
+            break
+
+        if is_board_full(board):
+            print("This game is a Tie!")
+
+    while True:
+        answer = input("Would you like to play another round? (Y/N)")
+        if answer.lower() == "y" or answer.lower == "yes":
+            board = ["" for i in range(10)]
+            print("--------------------------------------")
+            main_game()
+        else:
+            break
+
 
