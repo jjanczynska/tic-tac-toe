@@ -31,7 +31,6 @@ def print_board(board):
 board = create_board()
 print_board(board)
 
-
 # check if the player or the computer has won
 def is_winner(board, letter):
     return ((board[7] == letter & board[8] == letter & board[9] == letter) |
@@ -42,7 +41,6 @@ def is_winner(board, letter):
             (board[3] == letter & board[6] == letter & board[9] == letter) |
             (board[1] == letter & board[5] == letter & board[9] == letter) |
             (board[3] == letter & board[5] == letter & board[7] == letter))
-
 
 # get the players position
 def get_player_position():
@@ -60,7 +58,6 @@ def get_player_position():
         except ValueError:
             print("Please type a number!")
 
-            
 # get the computers move
 def get_computer_move(board, computer_letter):
     for i in range(1, 10):
@@ -81,9 +78,8 @@ def get_computer_move(board, computer_letter):
         if is_space_free(board, i):
             return i
 
-
-
 # check if the board is full
-#def is_board_full():
+def is_board_full(board):
+    return not any([space == "" for space in board])
 
 
