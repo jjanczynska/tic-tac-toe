@@ -1,21 +1,33 @@
-# create an empty board to play the game
 def create_board():
+    """
+    Function creates a list with 10 elements,
+    Each element is put into its own space
+    It returns a blank tic tac toe board
+    """
     board = [' ' for i in range(10)]
     return board
 
 
-# place a letter on the board
 def insert_lett(board, lett, position):
+    """
+    A letter is inserted into a position on the board
+    """
     board[position] = lett
 
 
-# check if the space on the board is free
 def is_space_free(board, position):
+    """
+    Takes the board and the position
+    Checks if the specified position is empty
+    """
     return board[position] == ' '
 
 
-# print the current board
 def print_board(board):
+    """
+    Function takes tick tack toe board as an argument
+    Prints it in a readable format
+    """
     print('   |  |')
     print('  ' + board[1]+' | ' + board[2]+' | ' + board[3])
     print('   |  |')
@@ -29,8 +41,12 @@ def print_board(board):
     print('   |  |')
 
 
-# check if the player or the computer has won
 def is_winner(board, lett):
+    """
+    Takes the board and letter as an argument
+    Checks if an "O" or "X" appears consecutively in a winning combo
+    Returns True if the letter has won, otherwise it is false
+    """
     return ((board[7] == lett and board[8] == lett and board[9] == lett) |
             (board[4] == lett and board[5] == lett and board[6] == lett) |
             (board[1] == lett and board[2] == lett and board[3] == lett) |
@@ -41,8 +57,13 @@ def is_winner(board, lett):
             (board[3] == lett and board[5] == lett and board[7] == lett))
 
 
-# get the players position
 def get_player_position(board):
+    """
+    Prompts the player to place "X" on the board
+    Returns the position as ineger if valid
+    Otherwise it asks the player to try again
+    While loop is being used to ask player for a valid input
+    """
     while True:
         position = input('Please select a position to place an \'X\' (1-9): ')
         try:
@@ -57,8 +78,15 @@ def get_player_position(board):
             print('Please type a number!')
 
 
-# get the computers move
 def get_computer_move(board, computer_lett):
+    """
+    Gets the computer to place to place its letter
+    Checks if the computer can win the game
+    by placing the letter in any of the empty spaces
+    on the board, if yes, then it returns the position
+    If the computer can't win, it checks if the player can
+    If both can't win, it returns a random position on the board
+    """
     for i in range(1, 10):
         board_copy = board.copy()
         if is_space_free(board_copy, i):
@@ -74,12 +102,17 @@ def get_computer_move(board, computer_lett):
             return i
 
 
-# check if the board is full
 def is_board_full(board):
+    """
+    Checks if all the spaces on the board are occupied or not
+    """
     return all(space == ' ' for space in board)
 
 
 def main_game():
+    """
+    Runs all the game functions in a specified order
+    """
     board = create_board()
     print('Tic-Tac-Toe - Welcome to the game!')
     print_board(board)
