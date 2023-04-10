@@ -5,8 +5,8 @@ def create_board():
 
 
 # place a letter on the board
-def insert_letter(board, letter, position):
-    board[position] = letter
+def insert_lett(board, lett, position):
+    board[position] = lett
 
 
 # check if the space on the board is free
@@ -30,15 +30,15 @@ def print_board(board):
 
 
 # check if the player or the computer has won
-def is_winner(board, letter):
-    return ((board[7] == letter & board[8] == letter & board[9] == letter) |
-            (board[4] == letter & board[5] == letter & board[6] == letter) |
-            (board[1] == letter & board[2] == letter & board[3] == letter) |
-            (board[1] == letter & board[4] == letter & board[7] == letter) |
-            (board[2] == letter & board[5] == letter & board[8] == letter) |
-            (board[3] == letter & board[6] == letter & board[9] == letter) |
-            (board[1] == letter & board[5] == letter & board[9] == letter) |
-            (board[3] == letter & board[5] == letter & board[7] == letter))
+def is_winner(board, lett):
+    return ((board[7] == lett and board[8] == lett and board[9] == lett) |
+            (board[4] == lett and board[5] == lett and board[6] == lett) |
+            (board[1] == lett and board[2] == lett and board[3] == lett) |
+            (board[1] == lett and board[4] == lett and board[7] == lett) |
+            (board[2] == lett and board[5] == lett and board[8] == lett) |
+            (board[3] == lett and board[6] == lett and board[9] == lett) |
+            (board[1] == lett and board[5] == lett and board[9] == lett) |
+            (board[3] == lett and board[5] == lett and board[7] == lett))
 
 
 # get the players position
@@ -58,16 +58,16 @@ def get_player_position(board):
 
 
 # get the computers move
-def get_computer_move(board, computer_letter):
+def get_computer_move(board, computer_lett):
     for i in range(1, 10):
         board_copy = board.copy()
         if is_space_free(board_copy, i):
-            insert_letter(board_copy, computer_letter, i)
-            if is_winner(board_copy, computer_letter):
+            insert_lett(board_copy, computer_lett, i)
+            if is_winner(board_copy, computer_lett):
                 return i
         if is_space_free(board_copy, i):
-            insert_letter(board_copy, 'XO'[computer_letter == 'O'], i)
-            if is_winner(board_copy, 'XO'[computer_letter == 'O']):
+            insert_lett(board_copy, 'XO'[computer_lett == 'O'], i)
+            if is_winner(board_copy, 'XO'[computer_lett == 'O']):
                 return i
     for i in range(1, 10):
         if is_space_free(board, i):
@@ -87,7 +87,7 @@ def main_game():
     while not is_board_full(board):
         if not is_winner(board, 'O'):
             position = get_player_position(board)
-            insert_letter(board, 'X', position)
+            insert_lett(board, 'X', position)
             print_board(board)
         else:
             print('Sorry, your opponent won this game!')
@@ -98,7 +98,7 @@ def main_game():
             if position == 0:
                 print('This game is a Tie!')
             else:
-                insert_letter(board, 'O', position)
+                insert_lett(board, 'O', position)
                 print("Computer placed an 'O' in position:", position)
                 print_board(board)
         else:
