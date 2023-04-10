@@ -29,9 +29,6 @@ def print_board(board):
     print("   |  |")
 
 
-board = create_board()
-print_board(board)
-
 # check if the player or the computer has won
 def is_winner(board, letter):
     return ((board[7] == letter & board[8] == letter & board[9] == letter) |
@@ -43,16 +40,17 @@ def is_winner(board, letter):
             (board[1] == letter & board[5] == letter & board[9] == letter) |
             (board[3] == letter & board[5] == letter & board[7] == letter))
 
+
 # get the players position
-def get_player_position():
+def get_player_position(board):
     while True:
         position = input('Please select a position to place an \'X\' (1-9): ')
         try:
             position = int(position)
-            if position < 1  and position > 9:
+            if position < 1  or position > 9:
                 print("Please enter a number between 1 and 9")
-            elif not check_if_space_free(board, position):
-                    print("Space is occupied!")
+            elif not is_space_free(board, position):
+                print("Space is occupied!")
             else:
                 return position
         except ValueError:
