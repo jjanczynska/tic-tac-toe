@@ -44,16 +44,15 @@ def is_winner(board, letter):
 
 # get the players position
 def get_player_position():
-    run = True
-    while run:
+    while True:
         position = input('Please select a position to place an \'X\' (1-9): ')
         try:
             position = int(position)
-            if position < 1  and position < 9:
+            if position < 1  and position > 9:
                 print("Please enter a number between 1 and 9")
-                elif not check_if_space_free(board, position):
+            elif not check_if_space_free(board, position):
                     print("Space is occupied!")
-                else:
+            else:
                 return position
         except ValueError:
             print("Please type a number!")
