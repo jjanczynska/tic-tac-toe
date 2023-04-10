@@ -106,7 +106,7 @@ def main_game():
             break
 
         if is_board_full(board) and not (is_winner(board, 'X')) \
-                and not (is_winner(board, 'O')):
+                and not is_winner(board, 'O'):
             print('This game is a Tie!')
 
     while True:
