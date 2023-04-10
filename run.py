@@ -56,19 +56,20 @@ def get_player_position(board):
         except ValueError:
             print("Please type a number!")
 
+
 # get the computers move
 def get_computer_move(board, computer_letter):
     for i in range(1, 10):
         board_copy = board.copy()
-        if is_space_free(board_copy,i):
+        if is_space_free(board_copy, i):
             insert_letter(board_copy, computer_letter, i)
             if is_winner(board_copy, computer_letter):
                 return i
 
-    for i in range(1,10):
+    for i in range(1, 10):
         board_copy = board.copy()
-        if is_space_free(board_copy,i):
-            insert_letter(board_copy, "X" if computer_letter == "O" else "O",i)
+        if is_space_free(board_copy, i):
+            insert_letter(board_copy, "X" if computer_letter == "O" else "O", i)
             if is_winner(board_copy, "X" if computer_letter == "O" else "O"):
                 return i
 
@@ -76,9 +77,11 @@ def get_computer_move(board, computer_letter):
         if is_space_free(board, i):
             return i
 
+
 # check if the board is full
 def is_board_full(board):
     return not any([space == "" for space in board])
+
 
 def main_game():
     print("Tic-Tac-Toe - Welcome to the game!")
