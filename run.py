@@ -10,7 +10,7 @@ def insert_letter(board, letter, position):
 
 
 # check if the space on the board is free
-def check_if_space_free(board, position):
+def is_space_free(board, position):
     return board[position] == " "
 
 
