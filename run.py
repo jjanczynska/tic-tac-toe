@@ -76,7 +76,7 @@ def get_computer_move(board, computer_letter):
 
 # check if the board is full
 def is_board_full(board):
-    return not any([space == ' ' for space in board])
+    return all(space == ' ' for space in board)
 
 
 def main_game():
@@ -84,8 +84,8 @@ def main_game():
     print('Tic-Tac-Toe - Welcome to the game!')
     print_board(board)
 
-    while not (is_board_full(board)):
-        if not (is_winner(board, 'O')):
+    while not is_board_full(board):
+        if not is_winner(board, 'O'):
             position = get_player_position(board)
             insert_letter(board, 'X', position)
             print_board(board)
@@ -93,7 +93,7 @@ def main_game():
             print('Sorry, your opponent won this game!')
             break
 
-        if not (is_winner(board, 'X')):
+        if not is_winner(board, 'X'):
             position = get_computer_move(board, 'O')
             if position == 0:
                 print('This game is a Tie!')
@@ -117,5 +117,3 @@ def main_game():
             main_game()
         else:
             break
-
-
