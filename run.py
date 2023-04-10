@@ -1,7 +1,8 @@
 # create an empty board to play the game
 def create_board():
-    board = ["" for i in range(10)]
+    board = [" " for i in range(10)]
     return board
+
 
 # place a letter on the board
 def insert_letter(board, letter, position):
@@ -10,7 +11,7 @@ def insert_letter(board, letter, position):
 
 # check if the space on the board is free
 def check_if_space_free(board, position):
-    return board[position]==""
+    return board[position] == " "
 
 
 # print the current board
@@ -97,10 +98,10 @@ def main_game():
             position = get_computer_move()
             if position == 0:
                 print("This game is a Tie!")
-                else:
-                    insert_letter("O", position)
-                    print("Computer placed an \'O\' in position", position, ":")
-                    print_board(board)
+            else:
+                insert_letter("O", position)
+                print("Computer placed an \'O\' in position", position, ":")
+                print_board(board)
         else:
             print("X\ won the game!")
             break
