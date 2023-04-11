@@ -106,7 +106,10 @@ def is_board_full(board):
     """
     Checks if all the spaces on the board are occupied or not
     """
-    return all(space == ' ' for space in board)
+    for i in range(1, len(board)):
+        if board[i] == ' ':
+            return False
+    return True
 
 
 def main_game():
