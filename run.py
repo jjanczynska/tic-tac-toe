@@ -68,7 +68,7 @@ def get_player_position(board):
         position = input('Please select a position to place an \'X\' (1-9): ')
         try:
             position = int(position)
-            if position < 1  or position > 9:
+            if position < 1 or position > 9:
                 print('Please enter a number between 1 and 9')
             elif not is_space_free(board, position):
                 print('Space is occupied!')
