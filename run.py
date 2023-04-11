@@ -150,3 +150,7 @@ def main_game():
             main_game()
         else:
             break
+
+
+if __name__ == '__main__':
+    main_game()
