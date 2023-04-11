@@ -1,6 +1,3 @@
-import random
-
-
 def create_board():
     """
     Function creates a list with 10 elements,
@@ -60,7 +57,7 @@ def is_winner(board, lett):
             (board[3] == lett and board[5] == lett and board[7] == lett))
 
 
-def get_player_position(board):
+def get_player_move(board):
     """
     Prompts the player to place "X" on the board
     Returns the position as ineger if valid
@@ -90,6 +87,7 @@ def get_computer_move(board, computer_lett):
     If the computer can't win, it checks if the player can
     If both can't win, it returns a random position on the board
     """
+
     for i in range(1, 10):
         board_copy = board.copy()
         if is_space_free(board_copy, i):
@@ -126,7 +124,7 @@ def main_game():
 
     while not is_board_full(board):
         if not is_winner(board, 'O'):
-            position = get_player_position(board)
+            position = get_player_move(board)
             insert_lett(board, 'X', position)
             print_board(board)
         else:
@@ -145,8 +143,8 @@ def main_game():
             print('"X" won the game!')
             break
 
-        if is_board_full(board) and not (is_winner(board, 'X')) \
-                and not is_winner(board, 'O'):
+        if is_board_full(board) and not is_winner(board, "X") \
+                and not is_winner(board, "O"):
             print('This game is a Tie!')
 
     while True:
