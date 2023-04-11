@@ -1,3 +1,6 @@
+import random
+
+
 def create_board():
     """
     Function creates a list with 10 elements,
@@ -80,7 +83,7 @@ def get_player_position(board):
 
 def get_computer_move(board, computer_lett):
     """
-    Gets the computer to place to place its letter
+    Gets the computer to place its letter
     Checks if the computer can win the game
     by placing the letter in any of the empty spaces
     on the board, if yes, then it returns the position
@@ -109,6 +112,7 @@ def is_board_full(board):
     for i in range(1, len(board)):
         if board[i] == ' ':
             return False
+
     return True
 
 
