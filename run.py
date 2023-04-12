@@ -39,7 +39,6 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
-    clear()
     print(Fore.RED + Back.BLUE + logo.center(80))
 
 
@@ -164,7 +163,6 @@ def main_game():
     Runs all the game functions in a specified order
     """
     print_game_logo()
-    clear()
 
     board = create_board()
     print('Tic-Tac-Toe - Welcome to the game!')
