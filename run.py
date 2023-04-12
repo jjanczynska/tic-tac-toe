@@ -1,15 +1,8 @@
-from os import system, name
+import time
 import colorama
 from colorama import Fore
 
 colorama.init(autoreset=True)
-
-
-def clear():
-    """
-    Clear the screen
-    """
-    _ = system("cls" if name == "nt" else "clear")
 
 
 def print_game_logo():
@@ -18,11 +11,11 @@ def print_game_logo():
     """
     logo = '''
 
-    _|_|_|_|_|  _|_|_|_|_|_|  
+_|_|_|_|_|  _|_|_|   _|_|_|  
     _|        _|    _|        
     _|        _|    _|        
     _|        _|    _|        
-    _|      _|_|_|    _|_|_|  
+    _|      _|_|_|   _|_|_|  
 
                                                       
 _|_|_|_|_|    _|_|      _|_|_|  
@@ -39,7 +32,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
-    print(Fore.RED + logo.center(80))
+    print(Fore.GREEN + logo.center(80))
 
 
 def create_board():
@@ -163,7 +156,7 @@ def main_game():
     Runs all the game functions in a specified order
     """
     print_game_logo()
-
+    time.sleep(3)
     board = create_board()
     print('Tic-Tac-Toe - Welcome to the game!')
     print_board(board)
