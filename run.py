@@ -1,6 +1,6 @@
 from os import system, name
 import colorama
-from colorama import Fore, Back
+from colorama import Fore
 
 colorama.init(autoreset=True)
 
@@ -39,7 +39,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
-    print(Fore.RED + Back.BLUE + logo.center(80))
+    print(Fore.RED + logo.center(80))
 
 
 def create_board():
