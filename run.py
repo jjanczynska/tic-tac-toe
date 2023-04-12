@@ -154,6 +154,7 @@ def main_game():
     """
     Runs all the game functions in a specified order
     """
+    print(Fore.RED + Back.BLUE + logo.center(80))
     board = create_board()
     print('Tic-Tac-Toe - Welcome to the game!')
     print_board(board)
