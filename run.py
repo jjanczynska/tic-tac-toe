@@ -1,5 +1,6 @@
 import colorama
-from colorama import FORE, BACK
+from colorama import Fore, Back
+
 colorama.init(autoreset=True)
 
 
@@ -14,8 +15,8 @@ def game_logo():
     _|        _|    _|        
     _|        _|    _|        
     _|      _|_|_|    _|_|_|  
-                              
-                                                          
+
+                                                      
 _|_|_|_|_|    _|_|      _|_|_|  
     _|      _|    _|  _|        
     _|      _|_|_|_|  _|        
@@ -30,7 +31,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
-    print(FORE.RED + BACK.BLUE + game_logo)
+    print(Fore.RED + Back.BLUE + game_logo)
 
 
 def create_board():
