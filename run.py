@@ -31,7 +31,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
-    print(Fore.RED + Back.BLUE + game_logo)
+    print(Fore.RED + Back.BLUE + logo.center(80))
 
 
 def create_board():
