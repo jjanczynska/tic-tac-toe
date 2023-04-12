@@ -2,6 +2,37 @@ import colorama
 from colorama import FORE, BACK
 colorama.init(autoreset=True)
 
+
+def game_logo():
+    """
+    game logo with ASCII code
+    """
+    logo = '''
+
+    _|_|_|_|_|  _|_|_|    _|_|_|  
+    _|        _|    _|        
+    _|        _|    _|        
+    _|        _|    _|        
+    _|      _|_|_|    _|_|_|  
+                              
+                                                          
+_|_|_|_|_|    _|_|      _|_|_|  
+    _|      _|    _|  _|        
+    _|      _|_|_|_|  _|        
+    _|      _|    _|  _|        
+    _|      _|    _|    _|_|_|  
+                                                            
+                              
+_|_|_|_|_|    _|_|    _|_|_|_|  
+    _|      _|    _|  _|        
+    _|      _|    _|  _|_|_|  
+    _|      _|    _|  _| 
+    _|        _|_|    _|_|_|_|
+
+    '''
+    print(FORE.RED + BACK.BLUE + game_logo)
+
+
 def create_board():
     """
     Function creates a list with 10 elements,
