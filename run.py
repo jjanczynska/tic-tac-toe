@@ -1,16 +1,24 @@
+from os import system, name
 import colorama
 from colorama import Fore, Back
 
 colorama.init(autoreset=True)
 
 
-def game_logo():
+def clear():
+    """
+    Clear the screen
+    """
+    _ = system("cls" if name == "nt" else "clear")
+
+
+def print_game_logo():
     """
     game logo with ASCII code
     """
     logo = '''
 
-    _|_|_|_|_|  _|_|_|    _|_|_|  
+    _|_|_|_|_|  _|_|_|_|_|_|  
     _|        _|    _|        
     _|        _|    _|        
     _|        _|    _|        
@@ -31,6 +39,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
+    clear()
     print(Fore.RED + Back.BLUE + logo.center(80))
 
 
