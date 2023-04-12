@@ -1,3 +1,7 @@
+import colorama
+from colorama import FORE, BACK
+colorama.init(autoreset=True)
+
 def create_board():
     """
     Function creates a list with 10 elements,
