@@ -17,7 +17,7 @@ def to_center(logo, width):
 
 def print_center(content, width):
     """
-    Manual centering of board and text
+    Manual centering of board 
     """
     padding = ' '*(width//2)
     parts = [padding[0: (width-len(p))//2+1]+p for p in content]
@@ -132,13 +132,13 @@ def get_player_move(board):
         try:
             position = int(position)
             if position < 1 or position > 9:
-                print('Please enter a number between 1 and 9')
+                print(Fore.YELLOW + 'Please enter a number between 1 and 9')
             elif not is_space_free(board, position):
-                print('Space is occupied!')
+                print(Fore.RED + 'Space is occupied!')
             else:
                 return position
         except ValueError:
-            print('Please type a number!')
+            print(Fore.GREEN + 'Please type a number!')
 
 
 def get_computer_move(board, computer_lett):
@@ -192,7 +192,7 @@ def main_game():
     print_game_logo()
     time.sleep(3)
     board = create_board()
-    print('Tic-Tac-Toe - Welcome to the game!')
+    print(Fore.GREEN + 'Tic-Tac-Toe - Welcome to the game!')
     print_board_centered(board)
 
     while not is_board_full(board):
@@ -201,7 +201,7 @@ def main_game():
             insert_lett(board, 'X', position)
             print_board_centered(board)
         else:
-            print('Sorry, your opponent won this game!')
+            print(Fore.RED + 'Sorry, your opponent won this game!')
             break
 
         if not is_winner(board, 'X'):
@@ -209,15 +209,15 @@ def main_game():
             if position == 0:
                 break
             insert_lett(board, 'O', position)
-            print("Computer placed an 'O' in position:", position)
+            print(Fore.CYAN + "Computer placed an 'O' in position:", position)
             print_board_centered(board)
         else:
-            print('"X" won the game!')
+            print(Fore.GREEN + '"X" won the game!')
             break
 
         if is_board_full(board) and not is_winner(board, "X") \
                 and not is_winner(board, "O"):
-            print('This game is a Tie!')
+            print(Fore.YELLOW + 'This game is a Tie!')
 
     while True:
         answer = input('Would you like to play another round? (Y/N)')
