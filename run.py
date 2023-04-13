@@ -17,11 +17,29 @@ def to_center(logo, width):
 
 def print_center(content, width):
     """
-    Manual centering of board 
+    Manual centering of board
     """
     padding = ' '*(width//2)
     parts = [padding[0: (width-len(p))//2+1]+p for p in content]
     return '\n'.join(parts)
+
+
+def rules_of_the_game():
+    """
+    Explains how the game is played
+    """
+    print(Fore.YELLOW + 'TIC TAC TOE')
+    print(Fore.YELLOW + "The game is played on a grid 3 squares by 3 squares")
+    print(Fore.GREEN + '1 | 2 | 3')
+    print(Fore.GREEN + '--|---|--')
+    print(Fore.GREEN + '4 | 5 | 6')
+    print(Fore.GREEN + '--|---|--')
+    print(Fore.GREEN + '7 | 8 | 9')
+    print(Fore.YELLOW + "You are X, computer is O.")
+    print(Fore.YELLOW + 'Players take turns putting marks in empty squares')
+    print(Fore.YELLOW + 'The first player to get 3 marks in a row -')
+    print(Fore.YELLOW + 'up, down, across, or diagonally- is the winner.')
+    print(Fore.YELLOW + 'When all 9 squares are full, the game is over.')
 
 
 def print_game_logo():
@@ -191,6 +209,8 @@ def main_game():
     """
     print_game_logo()
     time.sleep(3)
+    rules_of_the_game()
+    time.sleep(4)
     board = create_board()
     print(Fore.YELLOW + 'Tic-Tac-Toe - Welcome to the game!')
     print_board_centered(board)
