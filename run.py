@@ -1,3 +1,4 @@
+import random
 import time
 import colorama
 from colorama import Fore
@@ -131,13 +132,21 @@ def get_computer_move(board, computer_lett):
             insert_lett(board_copy, computer_lett, i)
             if is_winner(board_copy, computer_lett):
                 return i
+
+    for i in range(1, 10):
+        board_copy = board.copy()
         if is_space_free(board_copy, i):
             insert_lett(board_copy, 'XO'[computer_lett == 'O'], i)
             if is_winner(board_copy, 'XO'[computer_lett == 'O']):
                 return i
-    for i in range(1, 10):
-        if is_space_free(board, i):
-            return i
+
+    # If no winning move is possible, return a random move
+    possible_moves = [i for i in range(1, 10) if is_space_free(board, i)]
+    if possible_moves:
+        return random.choice(possible_moves)
+
+    # If there are no possible moves, return None (or raise an exception)
+    return None
 
 
 def is_board_full(board):
@@ -173,11 +182,10 @@ def main_game():
         if not is_winner(board, 'X'):
             position = get_computer_move(board, 'O')
             if position == 0:
-                print('This game is a Tie!')
-            else:
-                insert_lett(board, 'O', position)
-                print("Computer placed an 'O' in position:", position)
-                print_board(board)
+                break
+            insert_lett(board, 'O', position)
+            print("Computer placed an 'O' in position:", position)
+            print_board(board)
         else:
             print('"X" won the game!')
             break
