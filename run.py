@@ -6,6 +6,15 @@ from colorama import Fore
 colorama.init(autoreset=True)
 
 
+def to_center(logo, width):
+    """
+    Manual centering
+    """
+    padding = ' '*(width//2)
+    parts = [padding[0: (width-len(p))//2+1]+p for p in logo]
+    return '\n'.join(parts)
+
+
 def print_game_logo():
     """
     game logo with ASCII code
@@ -33,7 +42,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
     _|        _|_|    _|_|_|_|
 
     '''
-    print(Fore.GREEN + logo.center(80))
+    print(Fore.GREEN + to_center(logo.splitlines(), 80))
 
 
 def create_board():
