@@ -1,9 +1,18 @@
 import random
+from os import system, name
 import time
 import colorama
 from colorama import Fore
 
 colorama.init(autoreset=True)
+
+
+# Code found on GeeksForGeeks: How to clear screen in python?
+def clear():
+    """
+    Clear the screen
+    """
+    _ = system("cls" if name == "nt" else "clear")
 
 
 def to_center(logo, width):
@@ -73,6 +82,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
                           
 
     '''
+    clear()
     print(Fore.GREEN + to_center(logo.splitlines(), 80))
 
 
