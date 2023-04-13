@@ -192,7 +192,7 @@ def main_game():
     print_game_logo()
     time.sleep(3)
     board = create_board()
-    print(Fore.GREEN + 'Tic-Tac-Toe - Welcome to the game!')
+    print(Fore.YELLOW + 'Tic-Tac-Toe - Welcome to the game!')
     print_board_centered(board)
 
     while not is_board_full(board):
