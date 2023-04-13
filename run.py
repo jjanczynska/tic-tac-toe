@@ -100,7 +100,7 @@ def print_board_centered(board):
                      '  ' + board[7]+'| ' + board[8]+'| ' + board[9],
                      ' |  |']
 
-    centered_board = to_center(board_content, 50)
+    centered_board = to_center(board_content, 80)
     print(centered_board)
 
 
