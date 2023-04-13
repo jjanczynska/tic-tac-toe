@@ -8,10 +8,19 @@ colorama.init(autoreset=True)
 
 def to_center(logo, width):
     """
-    Manual centering
+    Manual centering of logo
     """
     padding = ' '*(width//2)
     parts = [padding[0: (width-len(p))//2+1]+p for p in logo]
+    return '\n'.join(parts)
+
+
+def print_center(content, width):
+    """
+    Manual centering of board and text
+    """
+    padding = ' '*(width//2)
+    parts = [padding[0: (width-len(p))//2+1]+p for p in content]
     return '\n'.join(parts)
 
 
@@ -21,25 +30,29 @@ def print_game_logo():
     """
     logo = '''
 
-_|_|_|_|_|  _|_|_|   _|_|_|  
+                              
+_|_|_|_|_|  _|_|_|    _|_|_|  
     _|        _|    _|        
     _|        _|    _|        
     _|        _|    _|        
-    _|      _|_|_|   _|_|_|  
-
-                                                      
+    _|      _|_|_|    _|_|_|  
+                              
+                              
+                                
 _|_|_|_|_|    _|_|      _|_|_|  
     _|      _|    _|  _|        
     _|      _|_|_|_|  _|        
     _|      _|    _|  _|        
     _|      _|    _|    _|_|_|  
-                                                            
-                              
+                                
+                                
+                                
 _|_|_|_|_|    _|_|    _|_|_|_|  
     _|      _|    _|  _|        
-    _|      _|    _|  _|_|_|  
-    _|      _|    _|  _| 
-    _|        _|_|    _|_|_|_|
+    _|      _|    _|  _|_|_|    
+    _|      _|    _|  _|        
+    _|        _|_|    _|_|_|_|  
+                          
 
     '''
     print(Fore.GREEN + to_center(logo.splitlines(), 80))
@@ -70,22 +83,25 @@ def is_space_free(board, position):
     return board[position] == ' '
 
 
-def print_board(board):
+def print_board_centered(board):
     """
     Function takes tick tack toe board as an argument
     Prints it in a readable format
     """
-    print('   |  |')
-    print('  ' + board[1]+'| ' + board[2]+'| ' + board[3])
-    print('   |  |')
-    print('------------')
-    print('   |  |')
-    print('  ' + board[4]+'| ' + board[5]+'| ' + board[6])
-    print('   |  |')
-    print('------------')
-    print('   |  |')
-    print('  ' + board[7]+'| ' + board[8]+'| ' + board[9])
-    print('   |  |')
+    board_content = [' |  |',
+                     '  ' + board[1]+'| ' + board[2]+'| ' + board[3],
+                     ' |  |',
+                     '------------',
+                     ' |  |',
+                     '  ' + board[4]+'| ' + board[5]+'| ' + board[6],
+                     ' |  |',
+                     '------------',
+                     ' |  |',
+                     '  ' + board[7]+'| ' + board[8]+'| ' + board[9],
+                     ' |  |']
+
+    centered_board = to_center(board_content, 50)
+    print(centered_board)
 
 
 def is_winner(board, lett):
@@ -177,13 +193,13 @@ def main_game():
     time.sleep(3)
     board = create_board()
     print('Tic-Tac-Toe - Welcome to the game!')
-    print_board(board)
+    print_board_centered(board)
 
     while not is_board_full(board):
         if not is_winner(board, 'O'):
             position = get_player_move(board)
             insert_lett(board, 'X', position)
-            print_board(board)
+            print_board_centered(board)
         else:
             print('Sorry, your opponent won this game!')
             break
@@ -194,7 +210,7 @@ def main_game():
                 break
             insert_lett(board, 'O', position)
             print("Computer placed an 'O' in position:", position)
-            print_board(board)
+            print_board_centered(board)
         else:
             print('"X" won the game!')
             break
