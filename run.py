@@ -214,6 +214,7 @@ def main_game():
     """
     print_game_logo()
     time.sleep(3)
+    clear()
     rules_of_the_game()
     time.sleep(4)
     board = create_board()
