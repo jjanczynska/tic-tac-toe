@@ -36,12 +36,13 @@ def rules_of_the_game():
     """
     Explains how the game is played
     """
+    print(Fore.GREEN + '************************'.center(80))
     print(Fore.YELLOW + 'TIC TAC TOE'.center(80))
     print(Fore.YELLOW + 'Game is played on a grid 3x3 squares'.center(80))
     print(Fore.GREEN + ' 1 | 2 | 3'.center(80))
-    print(Fore.GREEN + '---|---|---'.center(80))
+    print(Fore.GREEN + ' ---|---|---'.center(80))
     print(Fore.GREEN + ' 4 | 5 | 6'.center(80))
-    print(Fore.GREEN + '---|---|---'.center(80))
+    print(Fore.GREEN + ' ---|---|---'.center(80))
     print(Fore.GREEN + ' 7 | 8 | 9'.center(80))
     print(Fore.YELLOW + 'You are X, computer is O.'.center(80))
     print(Fore.YELLOW + 'Players take turns putting'.center(80))
@@ -51,6 +52,7 @@ def rules_of_the_game():
     print(Fore.YELLOW + 'is the WINNER.'.center(80))
     print(Fore.YELLOW + 'When all 9 squares are full-'.center(80))
     print(Fore.YELLOW + 'the GAME IS OVER!'.center(80))
+    print(Fore.GREEN + '************************'.center(80))
 
 
 def print_game_logo():
@@ -78,7 +80,7 @@ _|_|_|_|_|    _|_|    _|_|_|_|
 
     '''
     clear()
-    print(Fore.GREEN + to_center(logo.splitlines(), 80))
+    print(Fore.LIGHTMAGENTA_EX + to_center(logo.splitlines(), 80))
 
 
 def create_board():
@@ -219,7 +221,8 @@ def main_game():
     rules_of_the_game()
     time.sleep(4)
     board = create_board()
-    print(Fore.YELLOW + 'Tic-Tac-Toe - Welcome to the game!'.center(80))
+    print(Fore.LIGHTMAGENTA_EX + 'Tic-Tac-Toe - Welcome to the game!'.center(80))
+    time.sleep(2)
     print_board_centered(board)
 
     while not is_board_full(board):
