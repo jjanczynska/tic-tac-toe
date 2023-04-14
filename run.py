@@ -37,7 +37,8 @@ def rules_of_the_game():
     Explains how the game is played
     """
     print(Fore.GREEN + '************************'.center(80))
-    print(Fore.YELLOW + 'TIC TAC TOE'.center(80))
+    print(Fore.YELLOW + 'How to play the game:'.center(80))
+    print(Fore.YELLOW + 'TIC TAC TOE...'.center(80))
     print(Fore.YELLOW + 'Game is played on a grid 3x3 squares'.center(80))
     print(Fore.YELLOW + 'Each square has a number assigned'.center(80))
     print(Fore.YELLOW + 'As You can see below:'.center(80))
