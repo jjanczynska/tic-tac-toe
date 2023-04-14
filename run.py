@@ -255,6 +255,7 @@ def main_game():
             print('--------------------------------------')
             main_game()
         else:
+            print(Fore.LIGHTMAGENTA_EX + 'Thank you for playing!'.center(80))
             break
 
 
