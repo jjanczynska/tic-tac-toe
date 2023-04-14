@@ -153,7 +153,7 @@ def get_player_move(board):
     While loop is being used to ask player for a valid input
     """
     while True:
-        position = input(Fore.GREEN + 'Select a position to place \'X\':')
+        position = input(Fore.LIGHTGREEN_EX+'Select your position with \'X\':')
         try:
             position = int(position)
             if position < 1 or position > 9:
@@ -241,7 +241,7 @@ def main_game():
             print(Fore.LIGHTBLUE_EX + "Computer placed 'O' on:", position)
             print_board_centered(board)
         else:
-            print(Fore.LIGHTGREEN_EX + '"X" won the game!'.center(80))
+            print(Fore.LIGHTGREEN_EX + 'YOU won the game!'.center(80))
             break
 
         if is_board_full(board) and not is_winner(board, "X") \
