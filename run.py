@@ -2,7 +2,7 @@ import random
 from os import system, name
 import time
 import colorama
-from colorama import Fore
+from colorama import Fore, Back
 
 colorama.init(autoreset=True)
 
@@ -152,17 +152,17 @@ def get_player_move(board):
     While loop is being used to ask player for a valid input
     """
     while True:
-        position = input('Select a position to place an \'X\' (1-9): ')
+        position = input(Fore.BLUE + 'Select a position to place an \'X\':')
         try:
             position = int(position)
             if position < 1 or position > 9:
-                print(Fore.YELLOW + 'Enter a number between 1 and 9')
+                print(Fore.RED+'Enter a number between 1 and 9'.center(80))
             elif not is_space_free(board, position):
                 print(Fore.RED + 'Space is occupied!'.center(80))
             else:
                 return position
         except ValueError:
-            print(Fore.GREEN + 'Please type a number!'.center(80))
+            print(Fore.RED + 'Please type a number!'.center(80))
 
 
 def get_computer_move(board, computer_lett):
@@ -219,7 +219,7 @@ def main_game():
     rules_of_the_game()
     time.sleep(4)
     board = create_board()
-    print(Fore.YELLOW + 'Tic-Tac-Toe - Welcome to the game!')
+    print(Fore.YELLOW + 'Tic-Tac-Toe - Welcome to the game!'.center(80))
     print_board_centered(board)
 
     while not is_board_full(board):
@@ -228,7 +228,7 @@ def main_game():
             insert_lett(board, 'X', position)
             print_board_centered(board)
         else:
-            print(Fore.RED + 'Sorry, your opponent won this game!')
+            print(Fore.RED + 'Sorry, your opponent won this game!'.center(80))
             break
 
         if not is_winner(board, 'X'):
@@ -236,18 +236,18 @@ def main_game():
             if position == 0:
                 break
             insert_lett(board, 'O', position)
-            print(Fore.CYAN + "Computer placed an 'O' in position:", position)
+            print(Fore.CYAN + "Computer placed 'O' on:", position)
             print_board_centered(board)
         else:
-            print(Fore.GREEN + '"X" won the game!')
+            print(Fore.GREEN + '"X" won the game!'.center(80))
             break
 
         if is_board_full(board) and not is_winner(board, "X") \
                 and not is_winner(board, "O"):
-            print(Fore.YELLOW + 'This game is a Tie!')
+            print(Fore.YELLOW + 'This game is a Tie!'.center(80))
 
     while True:
-        answer = input('Would you like to play another round? (Y/N)')
+        answer = input('Would you like to play again? (Y/N)'.center(80))
         if answer.lower() == 'y' or answer.lower() == 'yes':
             board = create_board()
             print('--------------------------------------')
