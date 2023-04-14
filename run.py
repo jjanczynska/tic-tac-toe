@@ -1,8 +1,8 @@
-import random 
+import random
 from os import system, name
 import time
 import colorama
-from colorama import Fore, Back
+from colorama import Fore
 
 colorama.init(autoreset=True)
 
@@ -64,19 +64,19 @@ _|_|_|_|_|  _|_|_|    _|_|_|
     _|        _|    _|        
     _|        _|    _|        
     _|        _|    _|        
-    _|      _|_|_|    _|_|_|  
-                                                             
-_|_|_|_|_|    _|_|      _|_|_|  
+    _|      _|_|_|    _|_|_|
+                                       
+_|_|_|_|_|    _|_|      _|_|_|
     _|      _|    _|  _|        
     _|      _|_|_|_|  _|        
     _|      _|    _|  _|        
-    _|      _|    _|    _|_|_|  
-                                                             
-_|_|_|_|_|    _|_|    _|_|_|_|  
-    _|      _|    _|  _|        
-    _|      _|    _|  _|_|_|    
-    _|      _|    _|  _|        
-    _|        _|_|    _|_|_|_|  
+    _|      _|    _|    _|_|_|
+
+_|_|_|_|_|    _|_|    _|_|_|_|
+    _|      _|    _|  _|       
+    _|      _|    _|  _|_|_|   
+    _|      _|    _|  _|       
+    _|        _|_|    _|_|_|_|
 
     '''
     clear()
@@ -146,7 +146,6 @@ def is_winner(board, lett):
 
 
 def get_player_move(board):
-    
     """
     Prompts the player to place "X" on the board
     Returns the position as ineger if valid
@@ -154,7 +153,7 @@ def get_player_move(board):
     While loop is being used to ask player for a valid input
     """
     while True:
-        position = input(Fore.BLUE + 'Select a position to place an \'X\':')
+        position = input(Fore.GREEN + 'Select a position to place \'X\':')
         try:
             position = int(position)
             if position < 1 or position > 9:
@@ -221,7 +220,7 @@ def main_game():
     rules_of_the_game()
     time.sleep(4)
     board = create_board()
-    print(Fore.LIGHTMAGENTA_EX + 'Tic-Tac-Toe - Welcome to the game!'.center(80))
+    print(Fore.LIGHTMAGENTA_EX+'Tic-Tac-Toe - Welcome to the game!'.center(80))
     time.sleep(2)
     print_board_centered(board)
 
@@ -231,7 +230,7 @@ def main_game():
             insert_lett(board, 'X', position)
             print_board_centered(board)
         else:
-            print(Fore.RED + 'Sorry, your opponent won this game!'.center(80))
+            print(Fore.LIGHTRED_EX + 'Your opponent won this game!'.center(80))
             break
 
         if not is_winner(board, 'X'):
@@ -239,10 +238,10 @@ def main_game():
             if position == 0:
                 break
             insert_lett(board, 'O', position)
-            print(Fore.CYAN + "Computer placed 'O' on:", position)
+            print(Fore.LIGHTBLUE_EX + "Computer placed 'O' on:", position)
             print_board_centered(board)
         else:
-            print(Fore.GREEN + '"X" won the game!'.center(80))
+            print(Fore.LIGHTGREEN_EX + '"X" won the game!'.center(80))
             break
 
         if is_board_full(board) and not is_winner(board, "X") \
