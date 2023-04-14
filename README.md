@@ -1,31 +1,87 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# TIC-TAC-TOE GAME
 
-Welcome jjanczynska,
+## CONTENTS
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+---
 
-## Reminders
+* USER EXPERIENCE  
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+    * User Stories        
 
-## Creating the Heroku app
+* DESIGN  
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+    * Colour Scheme  
+    * Flow Chart  
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* FEATURES  
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* TECHNOLOGIES USED  
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+    * Pyhon modules Used
+    * Languages Used  
+    * Frameworks, Libraries and Programes Used  
 
-Connect your GitHub repository and deploy as normal.
+* TESTING  
 
-## Constraints
+* DEPLOYMENT AND LOCAL DEVELOPMENT  
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+    * Deployment  
 
------
-Happy coding!
+    * Local Development  
+
+        * How To Fork
+        * How To Clone
+        * Using GitPod
+
+* CREDITS  
+
+    * Code Used
+    * Acnowledgments    
+
+## USER EXPERIENCE (UX)
+ ---
+
+ ### User Stories
+
+ * As a First Time User I want to know what is the name of the game I am playing
+ * As a First Time User I want to know if I am playing the game on my own or againt somebody ot a computer
+ * As a First Time User I want to know how to play the game
+ * As a First Time User I want to know when is my turn
+ * As a First Time User I want to know who won
+ * As a First Time User I want to know can I play again
+
+ #### As a returning user I want to easily navigate through the game, even if I have not played it for a while 
+
+---
+ 
+ ## DESIGN
+
+ ---
+
+ ### Colour Scheme
+
+ The colour scheme used was defined on COLORAMA python module
+
+* __#FF80FF__ LIGHT MAGENTA was used to print a Tic Tac Toe logo, Welcome message and a Goodbye message
+* __#FFFF00__ YELLOW was used to print instrucions and in a message about game ending in a tie as a neutral colour in the game
+* __#00FF00__ GREEN was used to frame the instructions, light green version was used to print messages to the user like -
+  place the letter and You have won. The resaon I have used the light green version is through testing I have found the contrast much more user friendly in pronted text
+* __#FF0000__  RED colour I have used for printing out the computers moves, message that computer won the game and as warnings   about wrong input by the user
+* __#FFFFFF__ WHITE is a default colour in the application and the game board is left as white  when it first prints in the game
+
+## The Flow Chart
+--- 
+### The flowchart was made using lucid chart
+ ---
+ ## THE FEATURES
+--- 
+* The Game has only one page where the computer runs the program.
+    * Main Logo displayes at the beginning of the game
+    * Instructions on how to play the game are displayed next
+    * Welcome to Tic-Tac-Toe displayes after a sleep function 
+    * Game board prints in the terminal
+    * At the end of the game, when the user opts out from playing another round, a goobye message is displayed
+
+
+
+

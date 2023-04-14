@@ -242,7 +242,7 @@ def main_game():
             if position == 0:
                 break
             insert_lett(board, 'O', position)
-            print(Fore.LIGHTBLUE_EX + "Computer placed 'O' on:", position)
+            print(Fore.RED + "Computer placed 'O' on:", position)
             print_board_centered(board)
         else:
             print(Fore.LIGHTGREEN_EX + 'YOU won the game!'.center(80))
