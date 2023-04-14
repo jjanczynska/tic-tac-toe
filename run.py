@@ -1,4 +1,4 @@
-import random
+import random 
 from os import system, name
 import time
 import colorama
@@ -7,7 +7,6 @@ from colorama import Fore
 colorama.init(autoreset=True)
 
 
-# Code found on GeeksForGeeks: How to clear screen in python?
 def clear():
     """
     Clear the screen
@@ -37,27 +36,28 @@ def rules_of_the_game():
     """
     Explains how the game is played
     """
-    print(Fore.YELLOW + 'TIC TAC TOE')
-    print(Fore.YELLOW + "The game is played on a grid 3 squares by 3 squares")
-    print(Fore.GREEN + '1 | 2 | 3')
-    print(Fore.GREEN + '--|---|--')
-    print(Fore.GREEN + '4 | 5 | 6')
-    print(Fore.GREEN + '--|---|--')
-    print(Fore.GREEN + '7 | 8 | 9')
-    print(Fore.YELLOW + "You are X, computer is O.")
-    print(Fore.YELLOW + 'Players take turns putting marks in empty squares')
-    print(Fore.YELLOW + 'The first player to get 3 marks in a row -')
-    print(Fore.YELLOW + 'up, down, across, or diagonally- is the winner.')
-    print(Fore.YELLOW + 'When all 9 squares are full, the game is over.')
+    print(Fore.YELLOW + 'TIC TAC TOE'.center(80))
+    print(Fore.YELLOW + 'Game is played on a grid 3x3 squares'.center(80))
+    print(Fore.GREEN + ' 1 | 2 | 3'.center(80))
+    print(Fore.GREEN + '---|---|---'.center(80))
+    print(Fore.GREEN + ' 4 | 5 | 6'.center(80))
+    print(Fore.GREEN + '---|---|---'.center(80))
+    print(Fore.GREEN + ' 7 | 8 | 9'.center(80))
+    print(Fore.YELLOW + 'You are X, computer is O.'.center(80))
+    print(Fore.YELLOW + 'Players take turns putting'.center(80))
+    print(Fore.YELLOW + 'Marks in empty squares on the board'.center(80))
+    print(Fore.YELLOW + 'First player to get 3 marks in a row -'.center(80))
+    print(Fore.YELLOW + 'UP, DOWN, ACROSS, DIAGONALLY- '.center(80))
+    print(Fore.YELLOW + 'is the WINNER.'.center(80))
+    print(Fore.YELLOW + 'When all 9 squares are full-'.center(80))
+    print(Fore.YELLOW + 'the GAME IS OVER!'.center(80))
 
 
 def print_game_logo():
     """
     game logo with ASCII code
     """
-    logo = '''
-
-                              
+    logo = '''                    
 _|_|_|_|_|  _|_|_|    _|_|_|  
     _|        _|    _|        
     _|        _|    _|        
@@ -144,6 +144,7 @@ def is_winner(board, lett):
 
 
 def get_player_move(board):
+    
     """
     Prompts the player to place "X" on the board
     Returns the position as ineger if valid
@@ -151,17 +152,17 @@ def get_player_move(board):
     While loop is being used to ask player for a valid input
     """
     while True:
-        position = input('Please select a position to place an \'X\' (1-9): ')
+        position = input('Select a position to place an \'X\' (1-9): ')
         try:
             position = int(position)
             if position < 1 or position > 9:
-                print(Fore.YELLOW + 'Please enter a number between 1 and 9')
+                print(Fore.YELLOW + 'Enter a number between 1 and 9')
             elif not is_space_free(board, position):
-                print(Fore.RED + 'Space is occupied!')
+                print(Fore.RED + 'Space is occupied!'.center(80))
             else:
                 return position
         except ValueError:
-            print(Fore.GREEN + 'Please type a number!')
+            print(Fore.GREEN + 'Please type a number!'.center(80))
 
 
 def get_computer_move(board, computer_lett):
