@@ -88,6 +88,9 @@
     ![wrong input](docs/features/wrong-input.png)
     * In case the player want to put an X into an occupied place on the board
     ![space occupied](docs/features/space-occupied.png)
+    * At the end of the game the player is ifnormed who won the round and gets asked do they want to play another round
+    ![who won?](docs/features/who-won.png)
+    ![who won now?](docs/features/who-won2.png)
     * At the end of the game, when the user opts out from playing another round, a goodbye message is displayed
     ![goodbye message](docs/features/thank%20you.png)
 ---
