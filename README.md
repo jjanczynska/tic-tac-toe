@@ -17,8 +17,8 @@
 
 * TECHNOLOGIES USED  
 
+    * Languages Used
     * Pyhon modules Used
-    * Languages Used  
     * Frameworks, Libraries and Programes Used  
 
 * TESTING  
@@ -81,6 +81,29 @@
     * Welcome to Tic-Tac-Toe displayes after a sleep function 
     * Game board prints in the terminal
     * At the end of the game, when the user opts out from playing another round, a goobye message is displayed
+---
+## TECHNOLOGIES USED
+---
+### Languages Used
+
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSSS) - was used to edit the layout (mainly add background) in the layout.html file
+* [Python](https://www.python.org/) - was used to write the program.
+
+### Python Modules Used 
+
+* [random](https://docs.python.org/3/library/random.html) - was used to allow the computer to pick a random free space on the gameboard.
+* [os](https://docs.python.org/3/library/os.html) - was used to write the function to clear the terminal.
+* [time](https://docs.python.org/3/library/time.html) - was used to add a sleep function between displaying a message and clearing the terminal, or between 2 messages displaying.
+* [colorama](https://pypi.org/project/colorama/) - was used to add colour schemes to content displaying in the terminal.
+
+### Frameworks, Libraries and Programs Used 
+
+* [Git](https://git-scm.com/) - for version control. 
+* [GitHub](https://github.com/) - to store the project files.
+* [GitPod](https://www.gitpod.io/) - as the CDE for development.
+* [Heroku](heroku.com) - was used to deploy the progect.
+* [Lucidchart](https://www.lucidchart.com/) - to create the flow chart.
+* [Heropatterns](https://heropatterns.com/) - to create a CSS background
 
 
 
