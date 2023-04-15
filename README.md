@@ -1,11 +1,9 @@
 # TIC-TAC-TOE GAME
-
 ## [Link to the deployed application](https://jj-tic-tac-toe.herokuapp.com/)
+![main logo](docs/deployed.png)
 
 ## CONTENTS
-
 ---
-
 * [USER EXPERIENCE](#user-exp)  
 
     * [User Stories](#user-stories)        
@@ -44,7 +42,6 @@
 
 ## USER EXPERIENCE (UX)<a id = "user-exp"></a> 
  ---
-
  ### User Stories<a id = "user-stories"></a> 
 
  * As a First Time User I want to know what is the name of the game I am playing
@@ -76,12 +73,23 @@
  ---
  ## THE FEATURES<a id = "features"></a> 
 --- 
-* The Game has only one page where the computer runs the program.
+ * The Game has only one page where the computer runs the program.
     * Main Logo displayes at the beginning of the game
-    * Instructions on how to play the game are displayed next
-    * Welcome to Tic-Tac-Toe displayes after a sleep function 
+    ![main logo](docs/deployed.png)
+    *  Instructions on how to play the game are displayed next
+    ![game instructions](docs/features/game-instructions.png)
+    * Welcome to Tic-Tac-Toe displayes after a sleep function
+    ![Welcome to the game](docs/features/welcome%20to%20the%20game.png) 
     * Game board prints in the terminal
-    * At the end of the game, when the user opts out from playing another round, a goobye message is displayed
+    ![game board](docs/features/board.png)
+    * Messages display throught the game informing the user about computer moves and prompting the player to choose the move
+    ![Computer move](docs/features/players-messages.png)
+    * In case of a wrong input a message is displayed prompting the player to choose the right move
+    ![wrong input](docs/features/wrong-input.png)
+    * In case the player want to put an X into an occupied place on the board
+    ![space occupied](docs/features/space-occupied.png)
+    * At the end of the game, when the user opts out from playing another round, a goodbye message is displayed
+    ![goodbye message](docs/features/thank%20you.png)
 ---
 ## TECHNOLOGIES USED<a id = "technologies-used"></a> 
 ---
