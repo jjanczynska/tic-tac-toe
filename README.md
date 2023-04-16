@@ -70,6 +70,14 @@
 ## The Flow Chart<a id = "flow-chart"></a> 
 ---
 ### The flowchart was made using lucid chart
+
+<details>
+    <summary>Flow Chart</summary>
+
+![FlowChart](docs/flowchart.png)
+<br>
+
+</details>
  ---
  ## THE FEATURES<a id = "features"></a> 
 --- 

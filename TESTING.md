@@ -49,7 +49,7 @@ I have used Chrome Dev Tools Lighthouse to test the performance, accsesibility a
 
 Low score in SEO comes from the lack of meta description.
 
-## Maual Testing 
+## Maual Testing<a id = "manual-testing"></a>
 ---
 ### Testing User Stories
 
