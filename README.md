@@ -21,7 +21,7 @@
     * [Pyhon modules Used](#p-modules)
     * [Frameworks, Libraries and Programes Used](#frameworks-libraries-programs) 
 
-* [TESTING](#TESTING.md)  
+* [TESTING](TESTING.md)  
 
 * [DEPLOYMENT AND LOCAL DEVELOPMENT](#deployment-development) 
 
@@ -45,7 +45,7 @@
  ### User Stories<a id = "user-stories"></a> 
 
  * As a First Time User I want to know what is the name of the game I am playing
- * As a First Time User I want to know if I am playing the game on my own or againt somebody ot a computer
+ * As a First Time User I want to know if I am playing the game on my own, againt somebody or a computer
  * As a First Time User I want to know how to play the game
  * As a First Time User I want to know when is my turn
  * As a First Time User I want to know who won
