@@ -241,6 +241,9 @@ def main_game():
             break
 
         if not is_winner(board, 'X'):
+            if is_board_full(board):
+                print(Fore.YELLOW + 'Game Over! It is a Tie!'.center(80))
+                break
             position = get_computer_move(board, 'O')
             if position == 0:
                 break
@@ -250,10 +253,6 @@ def main_game():
         else:
             print(Fore.LIGHTGREEN_EX + 'YOU won the game!'.center(80))
             break
-
-        if is_board_full(board) and not is_winner(board, "X") \
-                and not is_winner(board, "O"):
-            print(Fore.YELLOW + 'This game is a Tie!'.center(80))
 
     while True:
         answer = input('Would you like to play again? (Y/N)'.center(80))
