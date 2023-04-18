@@ -62,12 +62,12 @@
 
  The colour scheme used was defined on COLORAMA python module
 
-* `__#FF80FF__` LIGHT MAGENTA was used to print a Tic Tac Toe logo, Welcome message and a Goodbye message
-* `__#FFFF00__` YELLOW was used to print instrucions and in a message about game ending in a tie as a neutral colour in the game
-* `__#00FF00__` GREEN was used to frame the instructions, light green version was used to print messages to the user like -
+* `#FF80FF` LIGHT MAGENTA was used to print a Tic Tac Toe logo, Welcome message and a Goodbye message
+* `#FFFF00` YELLOW was used to print instrucions and in a message about game ending in a tie as a neutral colour in the game
+* `#00FF00` GREEN was used to frame the instructions, light green version was used to print messages to the user like -
   place the letter and You have won. The resaon I have used the light green version is through testing I have found the contrast much more user friendly in pronted text
-* `__#FF0000__`  RED colour I have used for printing out the computers moves, message that computer won the game and as warnings   about wrong input by the user
-* `__#FFFFFF__` WHITE is a default colour in the application and the game board is left as white  when it first prints in the game
+* `#FF0000`  RED colour I have used for printing out the computers moves, message that computer won the game and as warnings   about wrong input by the user
+* `#FFFFFF` WHITE is a default colour in the application and the game board is left as white  when it first prints in the game
 ---
 ## The Flow Chart<a id = "flow-chart"></a> 
 ---
@@ -108,7 +108,7 @@
     * In case the player want to put an X into an occupied place on the board
     ![space occupied](docs/features/space-occupied.png)
 
-    * At the end of the game the player is ifnormed who won the round and gets asked do they want to play another round
+    * At the end of the game the player is informed who won the round and gets asked do they want to play another round
     ![who won?](docs/features/who-won.png)
     ![who won now?](docs/features/who-won2.png)
 
@@ -144,7 +144,7 @@
 * [Hero Patterns](https://heropatterns.com/) - to create a CSS background.
 
 ---
-## TESTING
+## [TESTING](TESTING.md)
 ---
 ## DEPLOYMENT AND LOCAL DEVELOPMENT<a id = "deployment-development"></a> 
 ---

@@ -29,8 +29,7 @@ Testing was conducted throught the project development cycle. Chrome dev tools w
 ---
 ### Jigsaw Validator
 ---
-As I have added some CSS code to the layout.html file, I have used [Jigsaw Validator](https://jigsaw.w3.org/css-validator/
-validator?uri=https%3A%2F%2Fjj-tic-tac-toe.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) to check for errors. 
+As I have added some CSS code to the layout.html file, I have used Jigsaw Validator to check for errors. 
 
 ![CSS Validator](docs/testing/CSS-Validator.png)
 
@@ -76,7 +75,7 @@ Low score in SEO comes from the lack of meta description.
 | 'X' PLACED IN A POSITION CHOSEN BY THE PLAYER| X placed in the chosen square on the board | Play the game - choose the position | 'X' placed in the chosen square on the board | PASS | 
 | INFORMATION ABOUT THE COMPUTER MOVE AND AN 'O' PRINTED ON THE BOARD | Message about the move taken by the computer and a board printed with the current move | Play the game, wait for the computer move | Message about the move taken by the computer and a board printed with the current move | PASS | 
 | MESSAGE ABOUT WHO WON THE GAME | Information about who won displayed underneath a full game board | Complete the game, fill the board | Information about who won displayed underneath a full game board | PASS | 
-| MESSAGE ABOUT A TIE | Information about a Tie result in the game underneath a full game board | Complete the game, fill the game board | Information about a Tie result in the game underneath a full game board | | 
+| MESSAGE ABOUT A TIE | Information about a Tie result in the game underneath a full game board | Complete the game, fill the game board | Information about a Tie result in the game underneath a full game board | PASS | 
 | MESSAGE ABOUT A WRONG INPUT BY THE PLAYER WHILE CHOOSING THEIR MOVE  | Message in red - Enter a number between 1 and 9 | Input a number < 1 or > 9 | Message in red - Enter a number between 1 and 9 | PASS | 
 | MESSAGE ABOUT AN INPUT THAT IS NOT A NUMBER | Message in red - Please type a number | In put a letter | Message in red - Please type a number | PASS |
 | QUESTION TO THE PLAYER DO THEY WANT TO CONTINUE THE GAME? | Display message - Would you like to play again? (Y/N) | Finish the game | Displayed message - Would you like to play again? (Y/N) | PASS | 
@@ -87,5 +86,17 @@ Low score in SEO comes from the lack of meta description.
 ## BUGS
 ---
 ### Known Bugs
+
+There is no known bugs in the program. 
+
+I have encountered one issue while testing the game that was quite persistant but I have managed to implement a fix to the bug.
+
+Before the fix- whenever a tie was reached in the game- this message appeared:
+
+![error](docs/testing/error.png)
+
+The result of the implemented fix:
+
+![fix](docs/testing/fix.png)
 
 ## RETURN TO [README](README.md)
