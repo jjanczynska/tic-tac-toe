@@ -145,6 +145,8 @@
 
 ---
 ## [TESTING](TESTING.md)
+
+Results of the testing of the programe are available in another file. You can visit is by clicking on a link above.
 ---
 ## DEPLOYMENT AND LOCAL DEVELOPMENT<a id = "deployment-development"></a> 
 ---
